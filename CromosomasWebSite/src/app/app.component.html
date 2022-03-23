@@ -1,5 +1,10 @@
-<h1>{{titulo}}</h1>
-<app-noticias></app-noticias>
-<mat-slider min="1" max="100" step="2" [(ngModel)]="valorBarra"> </mat-slider>
-{{valorBarra}}
-<app-create-noticia></app-create-noticia>
+<div class="aplicacion">
+    <mat-grid-list cols="1">
+        <mat-grid-tile class="tileMain">
+            <app-side-nav></app-side-nav>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<!-- <app-top></app-top> -->
+<!-- <app-side-nav></app-side-nav> -->
+

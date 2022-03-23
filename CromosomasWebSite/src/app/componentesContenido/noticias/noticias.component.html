@@ -1,5 +1,23 @@
-<h1>Listado de noticias</h1>
-<li *ngFor="let noticia of listaNoticias">
-    Id: {{noticia.id}}
-    Titulo: {{noticia.titulo}}
-</li>
+<div class="content">
+  <div fxLayout-lt-md="column" fxLayout="row wrap" fxLayoutGap="10px grid">
+    <div fxFlex.lt-md="100" fxFlex="50" *ngFor="let noticia of listaNoticias" >
+        <mat-card class="noticia-card">
+          <mat-card-header >
+            <div mat-card-avatar class="noticia-header-image" style="background-image: url({{noticia.avatar.url}})"></div>
+            <mat-card-title>{{noticia.titulo}}</mat-card-title>
+            <mat-card-subtitle>{{noticia.subtitulo}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src='{{noticia.imagen.url}}' alt='noticia.imagen.alt'>
+          <mat-card-content>
+            <p>
+              {{noticia.contenido}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+  </div>
+</div>

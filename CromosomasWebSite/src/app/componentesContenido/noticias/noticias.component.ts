@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Noticia } from 'src/app/models/noticia';
+import { listaNoticiasMock } from 'src/app/mock-data/mock-noticias';
+import { noticiaCard } from 'src/app/models/noticiaCard';
 
 @Component({
   selector: 'app-noticias',
@@ -8,26 +9,15 @@ import { Noticia } from 'src/app/models/noticia';
 })
 export class NoticiasComponent implements OnInit {
 
-  noticia: Noticia = {
-    id: 1,
-    titulo: 'titulo de la noticia',
-    contenido: 'Contenido'
-  };
-
-  listaNoticias: Noticia[] = [
-      {
-        id: 1,
-        titulo: 'noticia 1'
-      },
-      {
-        id: 2,
-        titulo: 'noticia 2'
-      }
-    ]
+  listaNoticias: noticiaCard[] = listaNoticiasMock;
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
+  
+  
 
 }

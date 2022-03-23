@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateNoticiaComponent } from './create-noticia.component';
+import { SideNavLateralComponent } from './side-nav-lateral.component';
 
-describe('CreateNoticiaComponent', () => {
-  let component: CreateNoticiaComponent;
-  let fixture: ComponentFixture<CreateNoticiaComponent>;
+describe('SideNavLateralComponent', () => {
+  let component: SideNavLateralComponent;
+  let fixture: ComponentFixture<SideNavLateralComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateNoticiaComponent ]
+      declarations: [ SideNavLateralComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateNoticiaComponent);
+    fixture = TestBed.createComponent(SideNavLateralComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

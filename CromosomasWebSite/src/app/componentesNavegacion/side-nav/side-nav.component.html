@@ -1,0 +1,28 @@
+<div class="sideNav_ToolBarContainer" [class.esMovil]="mobileQuery.matches">
+  <div *ngIf="mobileQuery.matches">
+    <mat-toolbar color="primary" class="barraHerramientasMovil">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+      <h1 class="tituloAplicacion">Reprogramación de cromosomas y emociones traumáticas</h1>
+    </mat-toolbar>
+  </div>
+
+  <div *ngIf="!mobileQuery.matches">
+    <mat-toolbar color="primary" class="barraHerramientasDesktop">
+      <mat-nav-list class="list-horizontal">
+        <mat-list-item *ngFor="let item of menu" ><a [routerLink]="'/'+item.ruta">{{item.texto}}</a></mat-list-item>
+      </mat-nav-list>
+    </mat-toolbar>
+  </div> 
+  
+  <mat-sidenav-container class="sidenavContainer" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <app-side-nav-lateral></app-side-nav-lateral>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <app-side-nav-main></app-side-nav-main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
